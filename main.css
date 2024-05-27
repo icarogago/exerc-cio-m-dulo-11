@@ -118,7 +118,7 @@ button{
     background-color: rgb(9, 106, 197);;
 }
 
-@media  screen and ( max-width: 640px) {
+@media  screen and (max-width: 640px) {
 
     .container {
         max-width: 90%;
@@ -133,7 +133,7 @@ button{
     }
 
     #sobre-a-loja {
-        display: flex;
+        display: flex;        
     }
     
     #sobre-a-loja img {
@@ -166,45 +166,21 @@ button{
 
 }
 
-@media screen and ( min-width: 641px) and ( max-width: 1023px) {
-    .container{
-        max-width: 90%;
-    }
-
-    #sobre-a-loja .container-flex {
-        display: block;
-    }
-    
-    #sobre-a-loja img {
-        width: 100%;        
-        margin-right: 0;
-        margin-bottom: 2%;
-    }
-
-    .lista ul {
-        grid-template-columns: repeat(2, 49%);
-    }
-
-    button {
-        margin-bottom: 10px;
-    }    
-}
-
-@media screen and (max-width: 1024px){
+@media screen and (min-width: 641px) and (max-width: 1023px) {
     .container{
         max-width: 90%;
     }
 
     #sobre-a-loja .container-flex {
         display: flex;
-        
     }
+
     #sobre-a-loja h2, p{
         padding-left: 16px;
     }
-        
+    
     #sobre-a-loja img {
-        width: 100%;              
+        max-width: 100%;        
         margin-right: 0;
         margin-bottom: 2%;
     }
