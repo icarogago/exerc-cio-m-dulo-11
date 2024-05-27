@@ -5,187 +5,183 @@
     font-family: 'Roboto', sans-serif;
 }
 
-html{
-    overflow-x: hidden;
-}
-
-.container {
+.container{
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
 }
 
-header{
-    background-color: #192a56;
-    padding-top: 16px;
-    color: #fff;
-}
-
-header > .container{
+header .container{
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 16px;
 }
 
-nav {
-    background-color: #1722bb;
-    padding: 16px 0;
+header{
+    padding: 16px 0 0;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 56px;
+}
+
+.submenu{
     display: none;
-}
-
-nav li{
-    list-style: none;
-    display: inline;
-    margin-right: 16px;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-nav li a{
-    color: #fff;
-    text-decoration: none;
-}
-
-.menu-hamburguer{
-    width: 32px;
-    cursor: pointer;
-}
-
-.menu-hamburguer span{
-    height: 2px;
-    width: 100%;
+    border: 1px solid red;
     background-color: #fff;
+    position: absolute;
+    left: 0;
+    width: 300px;
+    top: 100%;
+}
+
+.menu > li{
+    float: left;
+    list-style: none;
+    padding: 16px;
+    border-top: 4px solid transparent;
+    position: relative;
+}
+
+.clear {
+    clear: both;
+}
+
+.menu li:hover .submenu{
     display: block;
-    margin-bottom: 4px;
+}
+.menu li:hover{
+    border-color: red;
 }
 
-.container-flex{
-    display: flex;
-}
-
-#sobre-a-loja{
-    margin-top: 16px;
-    display: flex;
-}
-
-#sobre-a-loja img{
-    width: 500px;
-    margin-right: 24px;
-}
-
-section{
-    margin-top: 16px;
-}
-
-section h2{
-    margin-bottom: 16px;
-}
-
-
-button{
+.submenu li{
     display: block;
-    width: 100%;
-    padding: 8px 0;
-    border: none;
-    background-color: rgb(18, 62, 145);
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    font-style: italic;
-    cursor: pointer;
+    padding: 8px;    
 }
 
-.lista ul{
+.conteudo{
     display: grid;
-    grid-template-columns: repeat( 4 , 24.5%);
-    column-gap: 3%;
+    grid-template-columns: 70% 30%;
 }
 
-.lista-produtos img {
+.noticia img{
     max-width: 100%;
 }
 
-.lista-produtos li {
-    list-style: none;
+.destaque{
+    margin-bottom: 56px;
 }
 
-.lista-produtos p{
-    padding: 15px 0;
+.destaque .noticia a{
+    display: flex;
+    font-size: 2em;
 }
 
-.lista-produtos li button:hover{
-    background-color: rgb(9, 106, 197);;
+.destaque .noticia img{
+    margin-right: 8px;    
 }
 
-@media  screen and ( max-width: 640px) {
-
-    .container {
-        max-width: 90%;
-        display: block;
-    } 
-    
-    header > .container{
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        padding-bottom: 16px;
-    }
-
-    .sobre-a-loja {
-        display: flex;
-    }
-    
-    .sobre-a-loja img {
-        max-width: 100%;
-        margin-right: 0;
-        margin-bottom: 2%;
-    }
-
-    .menu-hamburguer {
-        display: block;
-    }
-
-    .menu-hamburguer span{
-        height: 2px;
-        width: 100%;
-        background-color: #fff;
-        display: block;
-        margin-bottom: 4px;
-    }
-
-    .lista ul {
-        display: block;
-        column-gap: 1%;
-        row-gap: 5%;
-    }
-
-    button {
-        margin-bottom: 10px;
-    }
-
+section h2{
+    margin-bottom: 32px;
 }
 
-@media screen and ( min-width: 641px) and ( max-width: 1023px) {
+aside{
+    padding-left: 40px;
+}
+
+aside .noticia{
+    margin-bottom: 24px;
+}
+
+.noticias{
+    display: grid;
+    grid-template-columns: repeat(3,32.6%);
+    column-gap: 1%;
+    row-gap: 5%;
+}
+
+@media screen and (max-width: 767px){
+    .conteudo{
+        display: block;
+    }
     .container{
         max-width: 90%;
     }
 
-    .sobre-a-loja .container-flex {
+    .destaque .noticia a{
         display: block;
+        font-size: 1.5em;
     }
     
-    .sobre-a-loja img {
-        max-width: 98%;
-        margin-right: 0;
-        margin-bottom: 2%;
-    }   
-
-    .lista .container-flex {
-        grid-template-columns: repeat(2, 49%);
+    .destaque .noticia img{
+        margin-right: 0;    
     }
 
-    button {
-        margin-bottom: 10px;
+    .noticias{
+        display: block;       
+    }
+
+    .noticias .noticia{
+        margin-bottom: 32px;
+    }
+
+    aside{
+        padding-left: 0;
+    }
+
+    header div.container{
+        flex-direction: column;
+    }
+
+    .submenu{
+        display: block;      
+        width: 100%;
+        position: relative;
+        border: none;
+    }
+
+    .menu{
+        display: none;
+    }
+    
+    .menu > li{
+        clear: both;
+    }    
+    .submenu li{
+        display: block;
+        padding: 8px;    
+    }
+
+    .botao-menu{
+        display: flex;
+        justify-content: center;
+        margin-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    .botao-menu button{
+        padding: 8px;
+    }   
+}
+
+@media screen and (min-width: 768px) and (max-width:1023px){
+    .container{
+        max-width: 90%;
+    }
+
+    .botao-menu{
+        display: none;
+    }
+
+    .destaque .noticia a{
+        font-size: 1.5em;
+    }
+
+    .noticia{
+        grid-template-columns: repeat(2,49%);
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .botao-menu{
+        display: none;
     }
 }
