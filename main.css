@@ -5,55 +5,215 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.container{
+html{
+    overflow-x: hidden;
+}
+
+.container {
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
 }
 
 header{
-    background-color: rgba(81, 69, 252, 0.685);
-    font-size: 1em;
+    background-color: #192a56;
+    padding-top: 16px;
+    color: #fff;
 }
 
-header .container{
+header > .container{
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+}
+
+nav {
+    background-color: #1722bb;
+    padding: 16px 0;
+    display: none;
+}
+
+nav li{
+    list-style: none;
+    display: inline;
+    margin-right: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu-hamburguer{
+    width: 32px;
+    cursor: pointer;
+}
+
+.menu-hamburguer span{
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.container-flex{
     display: flex;
-    justify-content: space-between; 
 }
 
-.menu{
-    padding: 8px;    
+#sobre-a-loja{
+    margin-top: 16px;
+    display: flex;
 }
-.menu li{
+
+#sobre-a-loja img{
+    width: 500px;
+    margin-right: 24px;
+}
+
+section{
+    margin-top: 16px;
+}
+
+section h2{
+    margin-bottom: 16px;
+}
+
+
+button{
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    background-color: rgb(18, 62, 145);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+}
+
+.lista ul{
+    display: grid;
+    grid-template-columns: repeat( 4 , 24.5%);
+    column-gap: 3%;
+}
+
+.lista-produtos img {
+    max-width: 100%;
+}
+
+.lista-produtos li {
     list-style: none;
 }
 
+.lista-produtos p{
+    padding: 15px 0;
+}
 
+.lista-produtos li button:hover{
+    background-color: rgb(9, 106, 197);;
+}
 
+@media  screen and ( max-width: 640px) {
 
+    .container {
+        max-width: 90%;
+        display: block;
+    } 
+    
+    header > .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding-bottom: 16px;
+    }
 
+    #sobre-a-loja {
+        display: flex;
+    }
+    
+    #sobre-a-loja img {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 2%;
+    }
 
+    .menu-hamburguer {
+        display: block;
+    }
 
+    .menu-hamburguer span{
+        height: 2px;
+        width: 100%;
+        background-color: #fff;
+        display: block;
+        margin-bottom: 4px;
+    }
 
+    .lista ul {
+        display: block;
+        column-gap: 1%;
+        row-gap: 5%;
+    }
 
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width:640px){
+    button {
+        margin-bottom: 10px;
+    }
 
 }
 
-@media screen and (min-width:641px) and (max-width:1023){
+@media screen and ( min-width: 641px) and ( max-width: 1023px) {
+    .container{
+        max-width: 90%;
+    }
 
+    #sobre-a-loja .container-flex {
+        display: block;
+    }
+    
+    #sobre-a-loja img {
+        width: 100%;        
+        margin-right: 0;
+        margin-bottom: 2%;
+    }
+
+    .lista ul {
+        grid-template-columns: repeat(2, 49%);
+    }
+
+    button {
+        margin-bottom: 10px;
+    }    
 }
 
-@media screen and (min-width:640px){
+@media screen and (max-width: 1024px){
+    .container{
+        max-width: 90%;
+    }
 
+    #sobre-a-loja .container-flex {
+        display: flex;
+        
+    }
+    #sobre-a-loja h2, p{
+        padding-left: 16px;
+    }
+        
+    #sobre-a-loja img {
+        width: 100%;              
+        margin-right: 0;
+        margin-bottom: 2%;
+    }
+
+    .lista ul {
+        grid-template-columns: repeat(2, 49%);
+    }
+
+    button {
+        margin-bottom: 10px;
+    }
 }
